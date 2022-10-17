@@ -1,0 +1,467 @@
+font-family: 'Caveat Brush', cursive;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: grey;
+  cursor: none;
+
+}
+
+canvas {
+	display: block;
+  z-index: 999;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.cursor{
+  z-index: 999;
+  position: fixed;
+  background: #2696e8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #2696e8,
+              0 0 60px #2696e8,
+              0 0 100px #2696e8;
+  animation: colors 5s infinite;
+  transform: translate(-50%, -50%);
+
+  transition: transform 0.2s;
+
+}
+
+@keyframes colors {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+
+}
+
+.cursor:before{
+content: '';
+position: absolute;
+background: #2696e8;
+width: 50px;
+height: 50px;
+opacity: 0.2;
+transform: translate(-30%, 30%);
+border-radius: 50%;
+}
+
+.container {
+  box-sizing: border-box;
+  height: 600px;
+  width: 400px;
+  position: absolute;
+  left: 450px;
+  top: 50px;
+  background-color: #E42029;
+
+}
+
+
+
+.title {
+  font-family: Caveat Brush;
+  font-style: italic;
+  font-size: 64px;
+  position: relative;
+  top: 20px;
+  left: 50px;
+  letter-spacing: 5px;
+  opacity: 1;
+  z-index: 4;
+  animation: title 3s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+
+}
+@keyframes title {
+  0%{ top: 20px left: 50px}
+  100%{ top: 450px}
+
+}
+
+.korean1{
+  font-family: Caveat Brush;
+  color: #FDF3D0;
+  font-size: 32px;
+  position: absolute;
+  top: 50px;
+  left: 125px;
+  letter-spacing: 5px;
+  opacity: 0;
+  animation: kor1 4s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes kor1 {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.korean2 {
+  font-family: Caveat Brush;
+  color: #FDF3D0;
+  font-size: 32px;
+  position: absolute;
+  top: 80px;
+  left: 170px;
+  letter-spacing: 5px;
+  opacity: 0;
+  animation: kor2 4s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes kor2 {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.korean3 {
+  width: 0;
+  word-wrap: break-word;
+  font-family: Caveat Brush;
+  color: #FDF3D0;
+  font-size: 18px;
+  position: absolute;
+  top: 160px;
+  left: 200px;
+  letter-spacing: 5px;
+  opacity: 0;
+  animation: kor3 4s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+}
+@keyframes kor3 {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.korean4 {
+  width: 0;
+  word-wrap: break-word;
+  font-family: Caveat Brush;
+  color: #FDF3D0;
+  font-size: 15px;
+  position: absolute;
+  top: 252px;
+  left: 200px;
+  letter-spacing: 5px;
+  opacity: 0;
+  animation: kor4 4s;
+  animation-fill-mode:  forwards;
+  animation-play-state: paused;
+}
+
+@keyframes kor4 {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+
+}
+.korean5 {
+  width: 0;
+  word-wrap: break-word;
+  font-family: Caveat Brush;
+  color: #FDF3D0;
+  font-size: 18px;
+  position: absolute;
+  top: 160px;
+  left: 170px;
+  letter-spacing: 5px;
+  opacity: 0;
+  animation: kor5 4s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+}
+@keyframes kor5 {
+0%{opacity: 0;}
+100%{opacity: 1;}
+
+}
+.cry {
+  font-size: 72px;
+  transform: rotatez(20deg);
+
+}
+
+.ing {
+  font-size: 60px;
+}
+
+.noods {
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+  animation: noods 2s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes noods {
+  0%{ top: 25px;}
+  50%{ top: 27px;}
+  100%{ top:25px;}
+
+
+}
+.chop {
+  position: absolute;
+  top: 146px;
+  z-index: 3;
+  animation: chop 2s;
+  animation-iteration-count: infinite;
+
+
+}
+@keyframes chop {
+  0%{ top: 146px;}
+  50%{ top: 148px;transform: rotateX(45deg);}
+  100%{ top:146px;transform: rotateX(0deg);}
+
+
+}
+.chop2  {
+  position: absolute;
+  top: 130px;
+  z-index: 1;
+  animation: chop2 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes chop2 {
+  0%{ top: 130px;}
+  50%{ top: 133px;}
+  100%{ top:130px;}
+}
+
+.chop3  {
+  position: absolute;
+  top: 130px;
+  left:275px;
+  z-index: 1
+  animation: chop3 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes chop3 {
+  0%{ top: 130px;}
+  50%{ top: 133px;}
+  100%{ top:130px;}
+}
+.chop4 {
+  position: absolute;
+  top: 146px;
+  left:275px;
+  z-index: 3;
+  animation: chop4 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes chop4 {
+  0%{ top: 146px;}
+  50%{ top: 148px;transform: rotateX(45deg);}
+  100%{ top:146px;transform: rotateX(0deg);}
+}
+
+.textw {
+  position: absolute;
+  top: 155px;
+  left: 150px;
+  transform: rotateX(20deg);
+  font-family: Caveat Brush;
+  font-size: 16px;
+  color: white;
+  animation: textw 2s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+@keyframes textw {
+  0%{top: 155px;  left: 150px;}
+  100%{top: 165px; left: 150px; opacity: 0}
+
+}
+
+.best {
+  font-family: Caveat Brush;
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  top: 180px;
+  left: 165px;
+  animation: best 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+  }
+
+@keyframes best {
+  0%{top: 180px;left: 165px;}
+  100%{top: 160px;  left: 170px; word-wrap: break-word; opacity: 0;}
+
+}
+
+.mem {
+  font-family: Caveat Brush;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  top: 275px;
+  left: 190px;
+  z-index: 4;
+  transform: rotateZ(-30deg);
+  font-style: italic;
+  animation: mem 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+
+
+}
+@keyframes mem {
+  0%{  top: 275px;left: 190px;}
+  100%{ top: 260px;left: 190px; opacity:0}
+}
+.hlet  {
+  font-family: Caveat Brush;
+  font-size: 84px;
+  color: black;
+  position: absolute;
+  top: 450px;
+  left: 90px;
+  z-index: 4;
+  animation: hlet 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+}
+@keyframes hlet {
+    0%{top: 450px;}
+    100%{top: 500px;}
+
+
+}
+
+.mart {
+  font-family: Caveat Brush;
+  font-size: 72px;
+  color: black;
+  position: absolute;
+  top: 458px;
+  left: 160px;
+  z-index: 4;
+  animation: mart 3s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+
+
+}
+@keyframes mart {
+  0%{top:458px;}
+  100%{top:508px;}
+
+}
+.mich {
+  font-family: Caveat Brush;
+  font-size: 48px;
+  color: white;
+  position: absolute;
+  top: 530px;
+  left: 30px;
+  font-style: italic;
+  animation: mich 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+
+}
+@keyframes mich {
+  0%{  top: 530px; left: 30px; opacity: 1;}
+  100%{top: 600px; left: 30px; opacity: 0;}
+
+}
+
+.zau {
+
+  font-family: Caveat Brush;
+  font-size: 48px;
+  color: white;
+  position: absolute;
+  top: 530px;
+  left: 220px;
+  font-style: italic;
+  animation: zau 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+
+}
+@keyframes zau {  0%{top: 530px;
+  left: 220px; opacity:1}
+  100%{top: 600px;
+    left: 220px; opacity:0}
+
+
+}
+
+.container:hover .korean1 {
+  animation-play-state: running;
+}
+.container:hover .korean2 {
+  animation-play-state: running;
+}
+.container:hover .korean3 {
+  animation-play-state: running;
+}
+.container:hover .korean4 {
+  animation-play-state: running;
+}
+
+.container:hover .korean5 {
+  animation-play-state: running;
+}
+
+.container:hover .mich {
+  animation-play-state: running;
+}
+.container:hover .zau {
+  animation-play-state: running;
+}
+.container:hover .title {
+  animation-play-state: running;
+}
+.container:hover .hlet {
+  animation-play-state: running;
+}
+.container:hover .mart {
+  animation-play-state: running;
+}
+.container:hover .best {
+  animation-play-state: running;
+}
+.container:hover .mem {
+  animation-play-state: running;
+}
+.container:hover .textw {
+  animation-play-state: running;
+}
+
+
+.container
